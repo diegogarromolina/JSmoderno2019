@@ -21,3 +21,9 @@ var edad2 = 28
 var diferenciaEdades = edad1 - edad2
 
 console.log(diferenciaEdades)
+
+// Operadores lógicos
+
+var mayor = edad1 === edad2
+
+console.log(mayor)
