@@ -79,3 +79,85 @@ for (var i = 0; i < impar.length; i++) {
     impar[i].style.backgroundColor = '#ccc'
     par[i].style.backgroundColor = 'grey'
 }
+
+/**************************
+ * Parent Node
+ */
+
+// var itemList = document.querySelector('#items')
+// console.log(itemList.parentNode)
+// var main = itemList.parentNode
+// main.style.backgroundColor = 'red'
+
+/**************************
+ * Parent Element: Funciona igual que parentNode
+ */
+
+var itemList = document.querySelector('#items')
+console.log(itemList.parentElement)
+var main = itemList.parentElement
+main.style.backgroundColor = 'red'
+
+/*********************
+ * childNodes
+ */
+
+console.log(itemList.childNodes)
+
+/*********************
+ * children
+ */
+
+console.log(itemList.children)
+
+/*********************
+ * firstChild / firstElementChild
+ */
+
+console.log(itemList.firstElementChild)
+
+/*********************
+ * lastChilc / lastElementChild
+ */
+
+console.log(itemList.lastElementChild)
+
+/*********************
+ * Elementos hermanos
+ */
+
+// previousSibling
+console.log(itemList.previousSibling)
+
+// previousElementSibling
+console.log(itemList.previousElementSibling)
+
+// nextSibling
+console.log(itemList.nextSibling)
+
+// nextElementSibling
+console.log(itemList.nextElementSibling)
+
+/***********************
+ * Crear Elementos
+ */
+
+ // createElement -> tagName
+var nuevoDiv = document.createElement('div')
+nuevoDiv.className = 'Hola'
+nuevoDiv.id = 'div-hola'
+nuevoDiv.setAttribute('title', 'Hola mundo')
+console.log(nuevoDiv)
+
+// createTextNode -> 
+var nuevoNodoText = document.createTextNode('Hola mundo')
+nuevoDiv.appendChild(nuevoNodoText)
+
+console.log(nuevoDiv)
+
+var contenedor = document.querySelector('.container')
+console.log(contenedor)
+var h1 = document.querySelector('h1')
+console.log(h1)
+contenedor.insertBefore(nuevoDiv, h1)
+contenedor.insertBefore(nuevoDiv, h1)
