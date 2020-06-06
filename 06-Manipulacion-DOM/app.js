@@ -161,3 +161,19 @@ var h1 = document.querySelector('h1')
 console.log(h1)
 contenedor.insertBefore(nuevoDiv, h1)
 contenedor.insertBefore(nuevoDiv, h1)
+
+/************************
+ * Eventos
+ */
+
+// document.getElementById('boton').addEventListener('click', function() {
+//     console.log('Click 2')
+// })
+
+document.getElementById('boton').addEventListener('click', hacerClick)
+document.getElementById('boton').addEventListener('')
+
+function hacerClick() {
+    console.log('Usted hizo click!')
+    document.getElementById('header-title').textContent = 'Texto Cambiado'
+}
