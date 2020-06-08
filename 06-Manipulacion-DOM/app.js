@@ -1,166 +1,166 @@
-// Examinando el DOM
+// // Examinando el DOM
 
-console.dir(document)
+// console.dir(document)
 
-console.log(document.URL)
-console.log(document.title)
-document.title = 'Prueba'
-console.log(document.title)
-console.log(document.head)
-console.log(document.body)
-console.log(document.all)
-console.log(document.all[5])
-console.log(document.forms[0])
+// console.log(document.URL)
+// console.log(document.title)
+// document.title = 'Prueba'
+// console.log(document.title)
+// console.log(document.head)
+// console.log(document.body)
+// console.log(document.all)
+// console.log(document.all[5])
+// console.log(document.forms[0])
 
-/************************
- * Obtener elementos del documento y manipularlos
- * getElementById()
- */
-console.log('Obtener elementos por ID')
-console.log(document.getElementById('header-title'))
-var headerTitle = document.getElementById('header-title')
-var header = document.getElementById('main-header')
-//console.log(headerTitle)
-headerTitle.textContent = 'Hola'
-headerTitle.innerText = 'Adiós'
-headerTitle.innerHTML = '<h3>Prueba</h3>'
+// /************************
+//  * Obtener elementos del documento y manipularlos
+//  * getElementById()
+//  */
+// console.log('Obtener elementos por ID')
+// console.log(document.getElementById('header-title'))
+// var headerTitle = document.getElementById('header-title')
+// var header = document.getElementById('main-header')
+// //console.log(headerTitle)
+// headerTitle.textContent = 'Hola'
+// headerTitle.innerText = 'Adiós'
+// headerTitle.innerHTML = '<h3>Prueba</h3>'
 
-/*************************
- * getElementsByClassName()
- */
+// /*************************
+//  * getElementsByClassName()
+//  */
 
-console.log('Obtener elementos por Nombre de Clase')
+// console.log('Obtener elementos por Nombre de Clase')
 
-var items = document.getElementsByClassName('list-group-item')
-console.log(items)
-items[0].textContent = 'Prueba'
-
-
-/*************************
- * getElementsByTagName()
- */
-
-var tags = document.getElementsByTagName('li')
-tags[2].textContent = 'Prueba 02'
+// var items = document.getElementsByClassName('list-group-item')
+// console.log(items)
+// items[0].textContent = 'Prueba'
 
 
-/*************************
- * querySelector
- */
+// /*************************
+//  * getElementsByTagName()
+//  */
 
-var head = document.querySelector('#main-header')
-header.style.borderBottom = 'solid 4px black'
-header.style.boxShadow = '0 0 20px grey'
+// var tags = document.getElementsByTagName('li')
+// tags[2].textContent = 'Prueba 02'
 
-var input = document.querySelector('input')
-input.value = 'Hola Mundo'
 
-var submit = document.querySelector('input[type="submit"]')
-submit.value = 'Enviar'
+// /*************************
+//  * querySelector
+//  */
 
-var item = document.querySelector('.list-group-item')
-item.style.color = 'white'
-item.style.backgroundColor = 'blue'
+// var head = document.querySelector('#main-header')
+// header.style.borderBottom = 'solid 4px black'
+// header.style.boxShadow = '0 0 20px grey'
 
-/*************************
- * querySelector
- */
+// var input = document.querySelector('input')
+// input.value = 'Hola Mundo'
 
-var items = document.querySelectorAll('.list-group-item')
-items[1].style.color = 'red'
+// var submit = document.querySelector('input[type="submit"]')
+// submit.value = 'Enviar'
 
-var titles = document.querySelectorAll('.title')
-console.log(titles)
-titles[0].textContent = 'Prueba de Título'
+// var item = document.querySelector('.list-group-item')
+// item.style.color = 'white'
+// item.style.backgroundColor = 'blue'
 
-var impar = document.querySelectorAll('li:nth-child(odd)')
-var par = document.querySelectorAll('li:nth-child(even)')
-for (var i = 0; i < impar.length; i++) {
-    impar[i].style.backgroundColor = '#ccc'
-    par[i].style.backgroundColor = 'grey'
-}
+// /*************************
+//  * querySelector
+//  */
 
-/**************************
- * Parent Node
- */
+// var items = document.querySelectorAll('.list-group-item')
+// items[1].style.color = 'red'
+
+// var titles = document.querySelectorAll('.title')
+// console.log(titles)
+// titles[0].textContent = 'Prueba de Título'
+
+// var impar = document.querySelectorAll('li:nth-child(odd)')
+// var par = document.querySelectorAll('li:nth-child(even)')
+// for (var i = 0; i < impar.length; i++) {
+//     impar[i].style.backgroundColor = '#ccc'
+//     par[i].style.backgroundColor = 'grey'
+// }
+
+// /**************************
+//  * Parent Node
+//  */
+
+// // var itemList = document.querySelector('#items')
+// // console.log(itemList.parentNode)
+// // var main = itemList.parentNode
+// // main.style.backgroundColor = 'red'
+
+// /**************************
+//  * Parent Element: Funciona igual que parentNode
+//  */
 
 // var itemList = document.querySelector('#items')
-// console.log(itemList.parentNode)
-// var main = itemList.parentNode
+// console.log(itemList.parentElement)
+// var main = itemList.parentElement
 // main.style.backgroundColor = 'red'
 
-/**************************
- * Parent Element: Funciona igual que parentNode
- */
+// /*********************
+//  * childNodes
+//  */
 
-var itemList = document.querySelector('#items')
-console.log(itemList.parentElement)
-var main = itemList.parentElement
-main.style.backgroundColor = 'red'
+// console.log(itemList.childNodes)
 
-/*********************
- * childNodes
- */
+// /*********************
+//  * children
+//  */
 
-console.log(itemList.childNodes)
+// console.log(itemList.children)
 
-/*********************
- * children
- */
+// /*********************
+//  * firstChild / firstElementChild
+//  */
 
-console.log(itemList.children)
+// console.log(itemList.firstElementChild)
 
-/*********************
- * firstChild / firstElementChild
- */
+// /*********************
+//  * lastChilc / lastElementChild
+//  */
 
-console.log(itemList.firstElementChild)
+// console.log(itemList.lastElementChild)
 
-/*********************
- * lastChilc / lastElementChild
- */
+// /*********************
+//  * Elementos hermanos
+//  */
 
-console.log(itemList.lastElementChild)
+// // previousSibling
+// console.log(itemList.previousSibling)
 
-/*********************
- * Elementos hermanos
- */
+// // previousElementSibling
+// console.log(itemList.previousElementSibling)
 
-// previousSibling
-console.log(itemList.previousSibling)
+// // nextSibling
+// console.log(itemList.nextSibling)
 
-// previousElementSibling
-console.log(itemList.previousElementSibling)
+// // nextElementSibling
+// console.log(itemList.nextElementSibling)
 
-// nextSibling
-console.log(itemList.nextSibling)
+// /***********************
+//  * Crear Elementos
+//  */
 
-// nextElementSibling
-console.log(itemList.nextElementSibling)
+//  // createElement -> tagName
+// var nuevoDiv = document.createElement('div')
+// nuevoDiv.className = 'Hola'
+// nuevoDiv.id = 'div-hola'
+// nuevoDiv.setAttribute('title', 'Hola mundo')
+// console.log(nuevoDiv)
 
-/***********************
- * Crear Elementos
- */
+// // createTextNode -> 
+// var nuevoNodoText = document.createTextNode('Hola mundo')
+// nuevoDiv.appendChild(nuevoNodoText)
 
- // createElement -> tagName
-var nuevoDiv = document.createElement('div')
-nuevoDiv.className = 'Hola'
-nuevoDiv.id = 'div-hola'
-nuevoDiv.setAttribute('title', 'Hola mundo')
-console.log(nuevoDiv)
+// console.log(nuevoDiv)
 
-// createTextNode -> 
-var nuevoNodoText = document.createTextNode('Hola mundo')
-nuevoDiv.appendChild(nuevoNodoText)
-
-console.log(nuevoDiv)
-
-var contenedor = document.querySelector('.container')
-console.log(contenedor)
-var h1 = document.querySelector('h1')
-console.log(h1)
-contenedor.insertBefore(nuevoDiv, h1)
-contenedor.insertBefore(nuevoDiv, h1)
+// var contenedor = document.querySelector('.container')
+// console.log(contenedor)
+// var h1 = document.querySelector('h1')
+// console.log(h1)
+// contenedor.insertBefore(nuevoDiv, h1)
+// contenedor.insertBefore(nuevoDiv, h1)
 
 /************************
  * Eventos
@@ -170,10 +170,34 @@ contenedor.insertBefore(nuevoDiv, h1)
 //     console.log('Click 2')
 // })
 
-document.getElementById('boton').addEventListener('click', hacerClick)
-document.getElementById('boton').addEventListener('')
+// document.getElementById('boton').addEventListener('click', hacerClick)
+// document.getElementById('boton').addEventListener('')
 
-function hacerClick() {
-    console.log('Usted hizo click!')
-    document.getElementById('header-title').textContent = 'Texto Cambiado'
+// function hacerClick() {
+//     console.log('Usted hizo click!')
+//     document.getElementById('header-title').textContent = 'Texto Cambiado'
+// }
+
+// Agregar un elemento a la lista
+var form = document.getElementById('formAgregar')
+var lista = document.getElementById('items')
+
+form.addEventListener('submit', agregarItem)
+
+function agregarItem(e) {
+    e.preventDefault()
+
+    var newItem = document.getElementById('item').value
+
+    var li = document.createElement('li')
+    li.className = 'list-group-item'
+    li.appendChild(document.createTextNode(newItem))
+
+    var botonDel = document.createElement('button')
+    botonDel.className = 'btn btn-danger btn-sm float-right'
+    botonDel.appendChild(document.createTextNode('X'))
+
+    li.appendChild(botonDel)
+
+    lista.appendChild(li)
 }
