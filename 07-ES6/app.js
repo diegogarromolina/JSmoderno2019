@@ -169,3 +169,53 @@ console.log(Edad)
 const {Nombre: n, Edad: e} = persona
 console.log(n)
 console.log(e)
+
+const calcMayorEdad = (year) => {
+    const edad = new Date().getFullYear() - year
+    const mayoria = edad >= 18 ? true : false
+    return [edad, mayoria]
+}
+const [edad2, mayoria] = calcMayorEdad(2010)
+console.log(edad2)
+console.log(`Es mayor de edad: ${mayoria}`)
+
+/*******************
+ * Mapas
+ */
+
+const data = new Map()
+
+data.set('nombre', 'Grover')
+data.set('edad', 34)
+data.set(1, 'diego@correo.com')
+
+console.log(data.get('nombre'))
+console.log(data.get(1))
+
+//data.delete(1)
+//data.clear()
+
+data.forEach((value, key) => {
+    console.log(`${key}: ${value}`)
+})
+
+/****************
+ * Operador de propagación
+ */
+
+var sumar = function(a, b, c, d) {
+    return a + b + c + d
+}
+
+var ope1 = sumar(10, 20, 30, 40)
+console.log(ope1)
+
+var valores = [10, 20, 30, 40]
+const ope2 = sumar(...valores)
+console.log(ope2)
+
+const rrhh = ['Pedro', 'Pablo', 'Ana']
+const contabilidad = ['Felipe', 'Carlos', 'María']
+
+const empresa = [...rrhh, ...contabilidad]
+console.log(empresa)
