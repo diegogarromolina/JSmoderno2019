@@ -62,3 +62,110 @@ console.log(nombre + ' ' + apellido + ', nació en ' + ciudad + ', y su edad es 
 
 // ES6
 console.log(`${nombre} ${apellido}, nació en ${ciudad}, y su edad es ${calcularEdad(nacimiento)}`)
+
+/************
+ * Nuevas funciones de cadenas ES6
+ */
+
+let nombreCompleto = `${nombre} ${apellido}`
+console.log(nombreCompleto)
+console.log(`${nombre} `.repeat(5))
+console.log(nombreCompleto.includes('Die'))
+console.log(nombreCompleto.startsWith('De'))
+console.log(nombreCompleto.endsWith('rr'))
+
+/******************
+ * Funciones flecha
+ */
+
+const years = [2000, 2005, 2008, 2012]
+
+// ES5
+var edad5_ = years.map(function(el) {
+    return 2020 - el
+})
+console.log(edad5_)
+
+// ES6
+let edad6_ = years.map(el => 2020 - el)
+console.log(edad6_)
+
+edad6_ = years.map((el, index) => `Edad: ${index+1}: ${2020-el}`)
+console.log(edad6_)
+
+edad6_ = years.map(
+    (el, index) => {
+        const yearActual = new Date().getFullYear()
+        const edad = yearActual - el
+        return `Edad: ${index+1}: ${edad}`
+    }
+)
+
+console.log(edad6_)
+
+// ES5
+
+function cuadrado(num) {
+    return num * num
+}
+
+console.log(cuadrado(5))
+
+// ES6
+
+const cuadrado_ = (num) => num * num
+
+console.log(cuadrado_(5))
+
+/// Con arreglo de personas
+const personas = [
+    {
+        nombre: 'Diego',
+        edad: 24
+    },
+    {
+        nombre: 'Melina',
+        edad: 25
+    },
+    {
+        nombre: 'Carlos',
+        edad: 30
+    }
+]
+
+// const menores30 = personas.filter(function(persona) {
+//     return persona.edad < 30
+// })
+
+const menores30 = personas.filter((persona) => persona.edad < 30)
+
+console.log(menores30)
+
+/**********************
+ * Destructuración o Destrucción
+ */
+
+// ES5
+var datos = ['Pablo', 25]
+var nombre_5 = datos[0]
+var edad_5 = datos[1]
+console.log(nombre_5)
+console.log(edad_5)
+
+// ES6
+var [nombre_6, edad_6] = ['Pablo', 25]
+console.log(nombre_6)
+console.log(edad_6)
+
+const persona = {
+    Nombre: 'Carlos',
+    Edad: 30
+}
+
+const {Nombre, Edad} = persona
+console.log(Nombre)
+console.log(Edad)
+
+const {Nombre: n, Edad: e} = persona
+console.log(n)
+console.log(e)
