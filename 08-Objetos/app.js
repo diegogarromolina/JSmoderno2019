@@ -1,35 +1,35 @@
-let miLibro = {
-    titulo: 'El libro de JavaScript',
-    autor: 'Diego Garro Molina',
-    paginas: 400,
-    publicado: false,
-}
+// let miLibro = {
+//     titulo: 'El libro de JavaScript',
+//     autor: 'Diego Garro Molina',
+//     paginas: 400,
+//     publicado: false,
+// }
 
-let miLibroB = {
-    titulo: 'Mi libro en PHP',
-    autor: 'Diego Garro',
-    paginas: 700,
-    publicado: true,
-}
+// let miLibroB = {
+//     titulo: 'Mi libro en PHP',
+//     autor: 'Diego Garro',
+//     paginas: 700,
+//     publicado: true,
+// }
 
-console.log(miLibro.titulo)
-console.log(miLibro.autor)
-console.log(`${miLibro.titulo} creado por ${miLibro.autor}`)
-miLibro.paginas = 500
-console.log(miLibro.paginas)
+// console.log(miLibro.titulo)
+// console.log(miLibro.autor)
+// console.log(`${miLibro.titulo} creado por ${miLibro.autor}`)
+// miLibro.paginas = 500
+// console.log(miLibro.paginas)
 
-let getResumen = (libro) => {
-    return  {
-        resumen: `${libro.titulo} creado por ${libro.autor}`,
-        resumenPaginas: `${libro.titulo} tiene ${libro.paginas} páginas`,
-    }
-}
+// let getResumen = (libro) => {
+//     return  {
+//         resumen: `${libro.titulo} creado por ${libro.autor}`,
+//         resumenPaginas: `${libro.titulo} tiene ${libro.paginas} páginas`,
+//     }
+// }
 
-let libroAResumen = getResumen(miLibro)
-let libroBResumen = getResumen(miLibroB)
+// let libroAResumen = getResumen(miLibro)
+// let libroBResumen = getResumen(miLibroB)
 
-console.log(libroAResumen.resumen)
-console.log(libroAResumen.resumenPaginas)
+// console.log(libroAResumen.resumen)
+// console.log(libroAResumen.resumenPaginas)
 
 /*******************
  * Crear un objeto persona con las siguientes propiedades:
@@ -50,3 +50,42 @@ console.log(libroAResumen.resumenPaginas)
 // console.log(`Edad: ${persona.edad}`)
 // console.log(`Ciudad: ${persona.ciudad}`)
 
+/***********************
+ * Referencia de Objetos
+ */
+
+// let persona = {
+//     nombre: 'Diego',
+//     edad: '30',
+//     sueldo: 1200,
+// }
+
+// let otraPersona = persona
+// otraPersona.sueldo = 1500
+// console.log(otraPersona)
+
+// let cambiarSueldo = (person, monto) => {
+//     person.sueldo = person.sueldo + monto
+//     //console.log(person)
+// }
+
+// cambiarSueldo(persona, 500)
+// console.log(otraPersona)
+// console.log(persona)
+
+/********************
+ * Métodos
+ */
+
+let persona = {
+    nombre: 'Diego',
+    edad: '30',
+    sueldo: 1200,
+    metodoPrueba: function() {
+        // console.log('Escribiendo desde el método de prueba')
+        return 'Resultado desde prueba'
+    }
+}
+
+let result = persona.metodoPrueba()
+console.log(result)
